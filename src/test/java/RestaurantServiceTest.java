@@ -73,6 +73,14 @@ class RestaurantServiceTest {
     }
     //<<<<<<<<<<<<<<<<<<<<ADMIN: ADDING & REMOVING RESTAURANTS>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+    //>>>>>>>>>>>>>>>>>>>>>>Cost Calculation (Total Cost)<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    @Test
+    public void total_cost_of_two_menu_items_Sweet_corn_soup_priced_119_and_Vegetable_lasagne_priced_269_should_return_388(){
+
+        Integer finalPrice = service.getTotalCost(restaurant, "Sweet corn soup", "Vegetable lasagne");
+        assertEquals(388, finalPrice);
+    }
+    //<<<<<<<<<<<<<<<<<<<<Cost Calculation (Total Cost)>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
 }

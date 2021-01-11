@@ -74,5 +74,17 @@ class RestaurantTest {
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+    //>>>>>>>>>>>>>>>>>>>>>>>>>>>Item Price Retrieval<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
+    @Test
+    public void retrieving_item_price_using_list_of_item_name(){
+
+        List<Integer> itemsPrices;
+        itemsPrices = restaurant.getItemPrices("Sweet corn soup","Vegetable lasagne");
+
+        assertEquals(2, itemsPrices.size());
+
+    }
+
+    //<<<<<<<<<<<<<<<<<<<<<<<Item Price Retrieval>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 }
