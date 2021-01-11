@@ -38,5 +38,13 @@ public class RestaurantService {
         return restaurants;
     }
 
+    public Integer getTotalCost(Restaurant restaurant,String... itemNames){
+        List<Integer> itemPricesList = restaurant.getItemPrices(itemNames);
+        Integer totalCost = 0;
+        for (Integer itemPrice : itemPricesList) {
+            totalCost = totalCost + itemPrice;
+        }
+        return totalCost;
+    }
 
 }

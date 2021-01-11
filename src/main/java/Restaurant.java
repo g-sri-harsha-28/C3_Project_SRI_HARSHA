@@ -66,6 +66,19 @@ public class Restaurant {
         return name;
     }
 
+    public List<Integer> getItemPrices(String... itemNames){
+        List<Integer> itemPriceList = new ArrayList<>();
+
+        for (String itemName : itemNames){
+            Item item = findItemByName(itemName);
+            if (item != null){
+                Integer price = item.getItemPrice();
+                itemPriceList.add(price);
+            }
+        }
+        return itemPriceList;
+    }
+
 
 
 
